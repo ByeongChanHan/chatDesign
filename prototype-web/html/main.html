@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exacode Chat</title>
+    <link href="../css/mainStyle.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>EXACODE Chat</h1>
+    </header>
+    <div class="conversation">
+      <aside class="history">
+        <button class="addConversation" onclick="onAddConversation()">
+          New Conversation
+        </button>
+        <button class="clearConversation" onclick="onClearConversation()">
+          Clear Conversations
+        </button>
+      </aside>
+      <main>
+        <section class="chat"></section>
+        <div class="prompt">
+          <textarea id="text" placeholder="Enter the Text"></textarea>
+          <button id="SendButton" onclick="sendData()">send</button>
+        </div>
+        <div class="options">
+          <select name="model" id="model">
+            <option value="gpt-3.5-turbo" selected>gpt-3.5-turbo</option>
+            <option value="gpt-4">gpt-4</option>
+            <option value="gpt-3.5-turbo-0301">gpt-3.5-turbo-0301</option>
+            <option value="gpt-4-0314">gpt-4-0314</option>
+          </select>
+          <select name="jailbreak" id="jailbreak">
+            <option value="default" selected>default</option>
+            <option value="gpt-math-1.0">math 1.0</option>
+            <option value="gpt-dude-1.0">dude 1.0</option>
+            <option value="gpt-dan-1.0">dan 1.0</option>
+            <option value="gpt-dan-2.0">dan 2.0</option>
+            <option value="gpt-dev-2.0">dev 2.0</option>
+            <option value="gpt-evil-1.0">evil 1.0</option>
+          </select>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>Copyright (c) 2022 LG Electronics, Inc All rights reserved.</p>
+    </footer>
+    <script src="../script/mainScript.js"></script>
+  </body>
+</html>
